@@ -1,0 +1,75 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6lwn07m5wq5j"]
+
+[ext_resource type="FontFile" uid="uid://0hl4g41jd7sl" path="res://fonts/kirifont/KiriFont.otf" id="1_p8xr8"]
+[ext_resource type="Script" path="res://Main.cs" id="1_perof"]
+[ext_resource type="AudioStream" uid="uid://cklee08b2hqo3" path="res://MainTheme.wav" id="2_f1mhy"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_perof")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_f1mhy")
+autoplay = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 309.0
+offset_top = 27.0
+offset_right = 1297.0
+offset_bottom = 116.0
+theme_override_fonts/normal_font = ExtResource("1_p8xr8")
+theme_override_font_sizes/normal_font_size = 30
+text = "
+Good Morning Dinobox!"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 88.0
+offset_top = 198.0
+offset_right = 336.0
+offset_bottom = 291.0
+theme_override_fonts/font = ExtResource("1_p8xr8")
+theme_override_font_sizes/font_size = 30
+text = "Pack Boxes?"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 451.0
+offset_top = 198.0
+offset_right = 698.0
+offset_bottom = 298.0
+theme_override_fonts/font = ExtResource("1_p8xr8")
+theme_override_font_sizes/font_size = 30
+text = "Find Missing
+ Packages?"
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 833.0
+offset_top = 194.0
+offset_right = 1053.0
+offset_bottom = 301.0
+theme_override_fonts/font = ExtResource("1_p8xr8")
+theme_override_font_sizes/font_size = 30
+text = "Serve Mail"
+
+[node name="Button4" type="Button" parent="."]
+offset_left = 437.0
+offset_top = 420.0
+offset_right = 732.0
+offset_bottom = 527.0
+theme_override_fonts/font = ExtResource("1_p8xr8")
+theme_override_font_sizes/font_size = 30
+text = "Tower Defence"
+
+[node name="Button5" type="Button" parent="."]
+offset_left = 15.0
+offset_top = 523.0
+offset_right = 310.0
+offset_bottom = 630.0
+theme_override_fonts/font = ExtResource("1_p8xr8")
+theme_override_font_sizes/font_size = 30
+text = "Credits"
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="OnFinished"]
+[connection signal="pressed" from="Button" to="." method="OnPressed"]
+[connection signal="pressed" from="Button2" to="." method="OnPressed1"]
+[connection signal="button_down" from="Button3" to="." method="OnButton3"]
+[connection signal="button_down" from="Button4" to="." method="Button4"]
+[connection signal="button_down" from="Button5" to="." method="Button5"]

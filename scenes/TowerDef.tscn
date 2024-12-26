@@ -1,0 +1,566 @@
+[gd_scene load_steps=41 format=3 uid="uid://dtxs5o6g6p27h"]
+
+[ext_resource type="Script" path="res://GameManager.cs" id="1_bj20j"]
+[ext_resource type="Texture2D" uid="uid://wg3k7varq3me" path="res://pixil-frame-0 (6).png" id="1_poppp"]
+[ext_resource type="Script" path="res://ClickedAndMoved.cs" id="2_yhc0w"]
+[ext_resource type="Texture2D" uid="uid://c08e2r37rkt4c" path="res://image_480.png" id="3_1a4ep"]
+[ext_resource type="Texture2D" uid="uid://c63knu5b8xh6i" path="res://pixil-frame-0.png" id="5_1ptsg"]
+[ext_resource type="FontFile" uid="uid://8qfj6qqidhfd" path="res://fonts/architect-s-daughter/ArchitectsDaughter.ttf" id="5_umqrp"]
+[ext_resource type="FontFile" path="res://fonts/architect-s-daughter/ArchitectsDaughter32.tres" id="6_5f5hk"]
+[ext_resource type="Texture2D" uid="uid://bafmo63kbhbnk" path="res://Untitled design (2) (1).png" id="8_xparj"]
+[ext_resource type="Script" path="res://baddie.cs" id="9_jb4sd"]
+[ext_resource type="Texture2D" uid="uid://dtrgxaf8kpvi5" path="res://pixil-frame-0 (1).png" id="10_g1iyk"]
+[ext_resource type="Script" path="res://Dart.cs" id="11_timto"]
+[ext_resource type="Texture2D" uid="uid://o2t4k3ved8xq" path="res://Untitled_design__3___1_-removebg-preview.png" id="12_wtsn7"]
+[ext_resource type="Script" path="res://Baddie2.cs" id="13_l1q6o"]
+[ext_resource type="Texture2D" uid="uid://dlmyc5pq8poum" path="res://Untitled_design__4___1_-removebg-preview.png" id="14_o55g6"]
+[ext_resource type="Script" path="res://HackMinDev.cs" id="14_rjcpw"]
+[ext_resource type="Texture2D" uid="uid://degyrf3piqsmf" path="res://Hack Minuite Dev.png" id="15_jr1wh"]
+[ext_resource type="Script" path="res://UntitledDesign31RemovebgPreview2.cs" id="15_x7re6"]
+[ext_resource type="Texture2D" uid="uid://cbvpu64ylaaml" path="res://Clock.png" id="16_1g353"]
+[ext_resource type="Script" path="res://SitOrScript.cs" id="17_um5yb"]
+[ext_resource type="Texture2D" uid="uid://duyqybkl5pbwh" path="res://Sitorpheus.png" id="18_uow5l"]
+[ext_resource type="Texture2D" uid="uid://7f7ruseqqq1d" path="res://Untitled_design__9_-removebg-preview.png" id="19_wkxa5"]
+[ext_resource type="Script" path="res://FireOrpheus.cs" id="21_f52u6"]
+[ext_resource type="Texture2D" uid="uid://4bqgsr8dqoxv" path="res://Orpheus3.png" id="22_tjqri"]
+[ext_resource type="Script" path="res://Zen.cs" id="24_44gqf"]
+[ext_resource type="Texture2D" uid="uid://cfh4mn4spycmq" path="res://ZenOrpheus.png" id="25_y44vn"]
+[ext_resource type="FontFile" uid="uid://0hl4g41jd7sl" path="res://fonts/kirifont/KiriFont.otf" id="26_13hv5"]
+[ext_resource type="Script" path="res://Sealer.cs" id="27_mcaad"]
+[ext_resource type="Texture2D" uid="uid://d1n3ejol2ur1g" path="res://LetterSealer.png" id="28_gou8e"]
+[ext_resource type="AudioStream" uid="uid://ciqqhtj4ptln4" path="res://travis type beat.wav" id="29_06n04"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lra5a"]
+size = Vector2(72, 72)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_308f3"]
+radius = 24.2998
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vd762"]
+size = Vector2(210, 155)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bdxej"]
+size = Vector2(78, 78)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h6kuc"]
+radius = 250.799
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fjfcb"]
+size = Vector2(80, 70)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j2wia"]
+radius = 95.4518
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e48ty"]
+size = Vector2(98, 68)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtv57"]
+size = Vector2(82, 67)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m506v"]
+size = Vector2(86, 62)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xbivw"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="TowerDef" type="Node2D"]
+script = ExtResource("1_bj20j")
+
+[node name="Pixil-frame-0(6)" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(2, 2.06369)
+texture = ExtResource("1_poppp")
+
+[node name="Area2D" type="Area2D" parent="Pixil-frame-0(6)"]
+visible = false
+collision_layer = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pixil-frame-0(6)/Area2D"]
+polygon = PackedVector2Array(-288, -94.0062, -119, -94.0062, -118.5, 33.9198, 67, 33.9198, 67, -113.873, 194, -113.873, 194, -79.9537, 101, -79.9537, 101, 67.3549, -153, 67.8395, -153, -60.0864, -288, -60.0864)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Pixil-frame-0(6)/Area2D"]
+polygon = PackedVector2Array(194, -157, 288, -157, 288, 156.515, -288, 157, -288, 108.543, 194, 109.028)
+
+[node name="Area2D2" type="Area2D" parent="Pixil-frame-0(6)"]
+visible = false
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pixil-frame-0(6)/Area2D2"]
+polygon = PackedVector2Array(-288, -60.0864, -153, -60.0864, -153, 67.3549, 101.5, 67.8395, 101.5, -80.4383, 194, -79.9537, 194, 108.059, -288, 109.028)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Pixil-frame-0(6)/Area2D2"]
+polygon = PackedVector2Array(-288, -94.0062, -288, -157, 194, -157, 194, -113.873, 67, -113.873, 67, 33.9198, -118.5, 33.9198, -119, -94.0062)
+
+[node name="StaticBody2D" type="Area2D" parent="."]
+position = Vector2(1002, 43)
+collision_layer = 8
+collision_mask = 9
+script = ExtResource("2_yhc0w")
+
+[node name="Image480" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(3.8147e-06, 0)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("3_1a4ep")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_lra5a")
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D"]
+collision_layer = 1024
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Area2D"]
+position = Vector2(-3, 0)
+scale = Vector2(5, 5)
+shape = SubResource("CircleShape2D_308f3")
+debug_color = Color(0.936703, 1.63645e-05, 0.631087, 0.42)
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(-526, -152)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 8.0
+offset_top = 569.0
+offset_right = 313.0
+offset_bottom = 663.0
+theme_override_fonts/normal_font = ExtResource("5_umqrp")
+theme_override_font_sizes/normal_font_size = 30
+text = "Stamps: "
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 322.0
+offset_top = 564.0
+offset_right = 532.0
+offset_bottom = 641.0
+theme_override_fonts/normal_font = ExtResource("6_5f5hk")
+theme_override_font_sizes/normal_font_size = 30
+text = "Round: "
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+offset_left = 548.0
+offset_top = 564.0
+offset_right = 758.0
+offset_bottom = 658.0
+theme_override_fonts/normal_font = ExtResource("6_5f5hk")
+theme_override_font_sizes/normal_font_size = 30
+text = "
+Lives: "
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="."]
+offset_left = 766.0
+offset_top = 562.0
+offset_right = 1150.0
+offset_bottom = 656.0
+theme_override_fonts/normal_font = ExtResource("6_5f5hk")
+theme_override_font_sizes/normal_font_size = 30
+text = "
+Points: "
+
+[node name="PopupMenu" type="PopupMenu" parent="."]
+size = Vector2i(200, 200)
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1054, 318)
+scale = Vector2(5, 5)
+texture = ExtResource("5_1ptsg")
+
+[node name="UntitledDesign(2)(1)" type="Sprite2D" parent="."]
+position = Vector2(-46, 168)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_xparj")
+offset = Vector2(-104, 0)
+script = ExtResource("9_jb4sd")
+
+[node name="Area2D" type="Area2D" parent="UntitledDesign(2)(1)"]
+collision_layer = 128
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UntitledDesign(2)(1)/Area2D"]
+position = Vector2(-105, 0)
+shape = SubResource("RectangleShape2D_vd762")
+
+[node name="Timer2" type="Timer" parent="."]
+
+[node name="Pixil-frame-0(1)" type="Sprite2D" parent="."]
+position = Vector2(-50887, 903)
+texture = ExtResource("10_g1iyk")
+script = ExtResource("11_timto")
+
+[node name="Area2D" type="Area2D" parent="Pixil-frame-0(1)"]
+visible = false
+collision_layer = 64
+collision_mask = 128
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pixil-frame-0(1)/Area2D"]
+polygon = PackedVector2Array(-5, -11, -5, -20, -4, -20, -4, -23, -3, -23, -3, -24, -2, -24, -2, -25, 1, -25, 1, -24, 2, -24, 2, -23, 3, -23, 3, -21, 3, -20, 4, -20, 4, -11, 5, -11, 5, -10, 6, -10, 6, -9, 7, -9, 7, -8, 8, -8, 8, -5, 7, -5, 7, -3, 6, -3, 6, -2, 4, -2, 4, -1, -5, -1, -5, -2, -7, -2, -7, -3, -8, -3, -8, -4, -9, -4, -9, -8, -8, -8, -8, -9, -7, -9, -7, -10, -6, -10, -6, -11, -5, -11)
+
+[node name="Pixil-frame-0(1)2" type="Sprite2D" parent="."]
+position = Vector2(-50887, 903)
+texture = ExtResource("10_g1iyk")
+script = ExtResource("11_timto")
+
+[node name="Area2D" type="Area2D" parent="Pixil-frame-0(1)2"]
+visible = false
+collision_layer = 64
+collision_mask = 16777344
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pixil-frame-0(1)2/Area2D"]
+polygon = PackedVector2Array(-5, -11, -5, -20, -4, -20, -4, -23, -3, -23, -3, -24, -2, -24, -2, -25, 1, -25, 1, -24, 2, -24, 2, -23, 3, -23, 3, -21, 3, -20, 4, -20, 4, -11, 5, -11, 5, -10, 6, -10, 6, -9, 7, -9, 7, -8, 8, -8, 8, -5, 7, -5, 7, -3, 6, -3, 6, -2, 4, -2, 4, -1, -5, -1, -5, -2, -7, -2, -7, -3, -8, -3, -8, -4, -9, -4, -9, -8, -8, -8, -8, -9, -7, -9, -7, -10, -6, -10, -6, -11, -5, -11)
+
+[node name="Timer3" type="Timer" parent="."]
+
+[node name="UntitledDesign31-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(-127, 169)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("12_wtsn7")
+offset = Vector2(-100, 0)
+script = ExtResource("13_l1q6o")
+
+[node name="Area2D" type="Area2D" parent="UntitledDesign31-removebg-preview"]
+position = Vector2(-80, -5)
+collision_layer = 128
+collision_mask = 64
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="UntitledDesign31-removebg-preview/Area2D"]
+position = Vector2(-20, 5)
+polygon = PackedVector2Array(-105, 55, -105, -65, -95, -75, 90, -75, 100, -65, 100, 60, 90, 75, -90, 75, -105, 60)
+
+[node name="UntitledDesign31-removebg-preview2" type="Sprite2D" parent="."]
+position = Vector2(-215, 169)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("14_o55g6")
+offset = Vector2(-100, 0)
+script = ExtResource("15_x7re6")
+
+[node name="Area2D" type="Area2D" parent="UntitledDesign31-removebg-preview2"]
+visible = false
+position = Vector2(-80, -5)
+collision_layer = 16777216
+collision_mask = 16777216
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="UntitledDesign31-removebg-preview2/Area2D"]
+position = Vector2(-20, 5)
+polygon = PackedVector2Array(-105, 55, -105, -65, -95, -75, 90, -75, 100, -65, 100, 60, 90, 75, -90, 75, -105, 60)
+
+[node name="Timer4" type="Timer" parent="."]
+
+[node name="Timer5" type="Timer" parent="."]
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="."]
+offset_left = 966.0
+offset_top = 80.0
+offset_right = 1040.0
+offset_bottom = 124.0
+text = "Dinobox $100"
+scroll_active = false
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="."]
+offset_left = 1063.0
+offset_top = 86.0
+offset_right = 1150.0
+offset_bottom = 141.0
+text = "Hack Min dev $200"
+scroll_active = false
+
+[node name="RichTextLabel7" type="RichTextLabel" parent="."]
+offset_left = 966.0
+offset_top = 202.0
+offset_right = 1041.0
+offset_bottom = 276.0
+text = "Tired Orpheus $600"
+scroll_active = false
+
+[node name="RichTextLabel10" type="RichTextLabel" parent="."]
+offset_left = 974.0
+offset_top = 353.0
+offset_right = 1149.0
+offset_bottom = 427.0
+text = "Master Sealer $1000"
+scroll_active = false
+
+[node name="RichTextLabel8" type="RichTextLabel" parent="."]
+offset_left = 1053.0
+offset_top = 203.0
+offset_right = 1128.0
+offset_bottom = 277.0
+text = "Angry Oprheus $800"
+scroll_active = false
+
+[node name="RichTextLabel9" type="RichTextLabel" parent="."]
+offset_left = 979.0
+offset_top = 465.0
+offset_right = 1157.0
+offset_bottom = 539.0
+text = "Zen Orpheus $2000"
+scroll_active = false
+
+[node name="StaticBody2D2" type="Area2D" parent="."]
+position = Vector2(1102, 43)
+collision_layer = 8
+collision_mask = 9
+script = ExtResource("14_rjcpw")
+
+[node name="HackMinuiteDev" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(-1, 1)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("15_jr1wh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_bdxej")
+
+[node name="Clock" type="Sprite2D" parent="."]
+position = Vector2(1339, 46)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("16_1g353")
+
+[node name="Area2D" type="Area2D" parent="Clock"]
+collision_layer = 64
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clock/Area2D"]
+shape = SubResource("CircleShape2D_h6kuc")
+
+[node name="StaticBody2D3" type="Area2D" parent="."]
+position = Vector2(1006, 166)
+collision_layer = 8
+collision_mask = 9
+script = ExtResource("17_um5yb")
+
+[node name="Sitorpheus" type="Sprite2D" parent="StaticBody2D3"]
+position = Vector2(0, -6.55651e-06)
+scale = Vector2(0.130647, 0.142485)
+texture = ExtResource("18_uow5l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+shape = SubResource("RectangleShape2D_fjfcb")
+
+[node name="Seal" type="Sprite2D" parent="."]
+position = Vector2(1515, 227)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("19_wkxa5")
+
+[node name="Area2D" type="Area2D" parent="Seal"]
+collision_layer = 64
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Seal/Area2D"]
+shape = SubResource("CircleShape2D_j2wia")
+
+[node name="Seal2" type="Sprite2D" parent="."]
+position = Vector2(1353, 369)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("19_wkxa5")
+
+[node name="Area2D" type="Area2D" parent="Seal2"]
+collision_layer = 64
+collision_mask = 16777344
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Seal2/Area2D"]
+shape = SubResource("CircleShape2D_j2wia")
+
+[node name="Seal2" type="Sprite2D" parent="Seal2"]
+position = Vector2(73.3335, 53.3332)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("19_wkxa5")
+
+[node name="Seal3" type="Sprite2D" parent="Seal2"]
+position = Vector2(13.3335, 79.9999)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("19_wkxa5")
+
+[node name="Seal4" type="Sprite2D" parent="Seal2"]
+position = Vector2(-59.9998, 59.9999)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("19_wkxa5")
+
+[node name="Seal5" type="Sprite2D" parent="Seal2"]
+position = Vector2(-73.3331, -6.66675)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("19_wkxa5")
+
+[node name="Seal6" type="Sprite2D" parent="Seal2"]
+position = Vector2(-66.6665, -53.3334)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("19_wkxa5")
+
+[node name="Seal7" type="Sprite2D" parent="Seal2"]
+position = Vector2(-26.6665, -66.6667)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("19_wkxa5")
+
+[node name="Seal8" type="Sprite2D" parent="Seal2"]
+position = Vector2(40.0002, -73.3334)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("19_wkxa5")
+
+[node name="Seal9" type="Sprite2D" parent="Seal2"]
+position = Vector2(80.0002, -20.0001)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("19_wkxa5")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1100, 171)
+collision_layer = 8
+collision_mask = 9
+script = ExtResource("21_f52u6")
+
+[node name="Orpheus3" type="Sprite2D" parent="Area2D"]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("22_tjqri")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_e48ty")
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(1053, 425)
+collision_layer = 8
+collision_mask = 9
+script = ExtResource("24_44gqf")
+
+[node name="ZenOrpheus" type="Sprite2D" parent="Area2D2"]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("25_y44vn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_vtv57")
+
+[node name="Area2D3" type="Area2D" parent="."]
+position = Vector2(1053, 317)
+collision_layer = 8
+collision_mask = 9
+script = ExtResource("27_mcaad")
+
+[node name="LetterSealer" type="Sprite2D" parent="Area2D3"]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("28_gou8e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+shape = SubResource("RectangleShape2D_m506v")
+
+[node name="Area2D" type="Area2D" parent="Area2D3"]
+collision_layer = 1024
+collision_mask = 128
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D3/Area2D"]
+position = Vector2(-3, 0)
+scale = Vector2(5, 5)
+shape = SubResource("CircleShape2D_308f3")
+debug_color = Color(0.936703, 1.63645e-05, 0.631087, 0.42)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 990.0
+offset_top = 512.0
+offset_right = 1131.0
+offset_bottom = 562.0
+theme_override_font_sizes/font_size = 30
+text = "Dino Info"
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+offset_left = 663.0
+offset_right = 1150.0
+offset_bottom = 654.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xbivw")
+
+[node name="RichTextLabel10" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -8.0
+offset_right = 492.0
+offset_bottom = 643.0
+theme_override_fonts/font = ExtResource("26_13hv5")
+text = "
+Description of DInosours!
+
+Dinobox:
+Base Dinosour, shoots stamp printer things at the bad guys!
+
+Hack Min Dev:
+Shoots a clock in any direction you choose!
+
+Tired Orpheus:
+Has a powerfdul stamp circling around him at all times
+
+Angry Oprheus:
+Has a extra powerful seal circling him, that can pop blue letters
+
+Master Sealer:
+Extra fast dinobox, with the ability to pop blue stamps
+
+Zen Oprheus: adds one life per round, for each you own."
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 507.0
+offset_right = 432.0
+offset_bottom = 646.0
+theme_override_fonts/font = ExtResource("26_13hv5")
+theme_override_font_sizes/font_size = 40
+text = "Done Reading?"
+
+[node name="StaticBody2D4" type="Area2D" parent="."]
+visible = false
+collision_layer = 524288
+collision_mask = 64
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D4"]
+polygon = PackedVector2Array(1, 649, 2, 681, 1156, 693, 1213, 691, 1215, -4, 1217, -67, -8, -59, -76, -61, -80, 672, -2, 675, -2, -7, 1152, -5, 1165, 649)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("29_06n04")
+autoplay = true
+
+[connection signal="body_entered" from="Pixil-frame-0(6)/Area2D" to="StaticBody2D" method="OnEnter2"]
+[connection signal="body_exited" from="Pixil-frame-0(6)/Area2D" to="StaticBody2D" method="OnExit2"]
+[connection signal="area_entered" from="StaticBody2D" to="StaticBody2D" method="OnEntered"]
+[connection signal="area_exited" from="StaticBody2D" to="StaticBody2D" method="OnExited"]
+[connection signal="mouse_entered" from="StaticBody2D" to="StaticBody2D" method="OnHover"]
+[connection signal="mouse_exited" from="StaticBody2D" to="StaticBody2D" method="HoverExit"]
+[connection signal="area_entered" from="StaticBody2D/Area2D" to="StaticBody2D" method="BaddieEnter"]
+[connection signal="area_entered" from="StaticBody2D/Area2D" to="UntitledDesign(2)(1)" method="BaddieEntered"]
+[connection signal="id_pressed" from="PopupMenu" to="StaticBody2D" method="IdClicked"]
+[connection signal="index_pressed" from="PopupMenu" to="StaticBody2D" method="IndexClicked"]
+[connection signal="mouse_entered" from="PopupMenu" to="StaticBody2D" method="popin"]
+[connection signal="mouse_exited" from="PopupMenu" to="StaticBody2D" method="Popout"]
+[connection signal="timeout" from="Timer" to="StaticBody2D" method="OnOut"]
+[connection signal="area_entered" from="UntitledDesign(2)(1)/Area2D" to="StaticBody2D" method="onareain"]
+[connection signal="timeout" from="Timer2" to="StaticBody2D" method="Timer2Out"]
+[connection signal="timeout" from="Timer2" to="UntitledDesign(2)(1)" method="TimeOut"]
+[connection signal="timeout" from="Timer3" to="StaticBody2D" method="Timeout3"]
+[connection signal="area_entered" from="UntitledDesign31-removebg-preview/Area2D" to="StaticBody2D" method="OnAreaIn"]
+[connection signal="area_entered" from="UntitledDesign31-removebg-preview2/Area2D" to="StaticBody2D" method="OnAreaIn"]
+[connection signal="timeout" from="Timer4" to="UntitledDesign31-removebg-preview" method="TimeOut"]
+[connection signal="timeout" from="Timer5" to="UntitledDesign31-removebg-preview2" method="TimeOut"]
+[connection signal="area_entered" from="StaticBody2D2" to="StaticBody2D2" method="OnEntered"]
+[connection signal="area_exited" from="StaticBody2D2" to="StaticBody2D2" method="OnExited"]
+[connection signal="mouse_entered" from="StaticBody2D2" to="StaticBody2D2" method="OnHover"]
+[connection signal="mouse_exited" from="StaticBody2D2" to="StaticBody2D2" method="HoverExit"]
+[connection signal="area_entered" from="StaticBody2D3" to="StaticBody2D3" method="OnEntered"]
+[connection signal="area_exited" from="StaticBody2D3" to="StaticBody2D3" method="OnExited"]
+[connection signal="mouse_entered" from="StaticBody2D3" to="StaticBody2D3" method="OnHover"]
+[connection signal="mouse_exited" from="StaticBody2D3" to="StaticBody2D3" method="HoverExit"]
+[connection signal="area_entered" from="Area2D" to="Area2D" method="OnEntered"]
+[connection signal="area_exited" from="Area2D" to="Area2D" method="OnExited"]
+[connection signal="mouse_entered" from="Area2D" to="Area2D" method="OnHover"]
+[connection signal="mouse_exited" from="Area2D" to="Area2D" method="HoverExit"]
+[connection signal="area_entered" from="Area2D2" to="Area2D2" method="OnEntered"]
+[connection signal="area_exited" from="Area2D2" to="Area2D2" method="OnExited"]
+[connection signal="mouse_entered" from="Area2D2" to="Area2D2" method="OnHover"]
+[connection signal="mouse_exited" from="Area2D2" to="Area2D2" method="HoverExit"]
+[connection signal="area_entered" from="Area2D3" to="Area2D3" method="OnEntered"]
+[connection signal="area_exited" from="Area2D3" to="Area2D3" method="OnExited"]
+[connection signal="mouse_entered" from="Area2D3" to="Area2D3" method="OnHover"]
+[connection signal="mouse_exited" from="Area2D3" to="Area2D3" method="HoverExit"]
+[connection signal="area_entered" from="Area2D3/Area2D" to="Area2D3" method="BaddieEnter"]
+[connection signal="pressed" from="Button" to="." method="PressOpen"]
+[connection signal="pressed" from="Panel/Button" to="." method="PressClose"]
+[connection signal="area_entered" from="StaticBody2D4" to="StaticBody2D2" method="edge"]
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="Fin"]

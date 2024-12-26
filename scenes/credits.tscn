@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbusvi0b166n2"]
+
+[ext_resource type="Script" path="res://Credits.cs" id="1_j6scq"]
+[ext_resource type="FontFile" uid="uid://0hl4g41jd7sl" path="res://fonts/kirifont/KiriFont.otf" id="2_lfhvl"]
+[ext_resource type="AudioStream" uid="uid://cklee08b2hqo3" path="res://MainTheme.wav" id="3_mfmpu"]
+
+[node name="Credits" type="Node2D"]
+script = ExtResource("1_j6scq")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 1156.0
+offset_bottom = 511.0
+theme_override_fonts/normal_font = ExtResource("2_lfhvl")
+theme_override_font_sizes/normal_font_size = 30
+text = "
+Thank you for playing
+
+All music is made by me, Ryan Brandt.
+
+The assets are from Hackclub.com and from members of the hack club slack community!
+
+All code is done by me, Ryan Brandt, with help from hackclub slack, and 
+some guidence from AI (only to help find errors)
+
+But Most importantly thank you for playing!"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 421.0
+offset_top = 452.0
+offset_right = 713.0
+offset_bottom = 619.0
+theme_override_fonts/font = ExtResource("2_lfhvl")
+theme_override_font_sizes/font_size = 30
+text = "Return to Menu"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_mfmpu")
+autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="ButtonPress"]
+[connection signal="pressed" from="Button" to="." method="ButtonPressed2"]
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="Fin"]
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="Fin2"]

@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://dg47dvkaehtry"]
+
+[ext_resource type="Script" path="res://Node2d.cs" id="1_h4kpk"]
+[ext_resource type="FontFile" uid="uid://0hl4g41jd7sl" path="res://fonts/kirifont/KiriFont.otf" id="2_gryre"]
+[ext_resource type="Texture2D" uid="uid://c08e2r37rkt4c" path="res://image_480.png" id="4_3q3gc"]
+[ext_resource type="Texture2D" uid="uid://5twd43e1vj5k" path="res://img_5523.png" id="5_oerr1"]
+[ext_resource type="AudioStream" uid="uid://cklee08b2hqo3" path="res://MainTheme.wav" id="6_oso47"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_h4kpk")
+
+[node name="Button" type="Button" parent="."]
+z_index = 3
+offset_left = 400.0
+offset_top = 312.0
+offset_right = 706.0
+offset_bottom = 403.0
+theme_override_colors/font_disabled_color = Color(0.966183, 0, 0.473224, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.964249, 1.92523e-06, 0.485272, 1)
+theme_override_fonts/font = ExtResource("2_gryre")
+theme_override_font_sizes/font_size = 38
+action_mode = 0
+text = "Start Game"
+
+[node name="Image480" type="Sprite2D" parent="."]
+position = Vector2(203, 429)
+scale = Vector2(0.720833, 0.720833)
+texture = ExtResource("4_3q3gc")
+
+[node name="Img5523" type="Sprite2D" parent="."]
+position = Vector2(894, 432)
+scale = Vector2(0.247222, 0.254938)
+texture = ExtResource("5_oerr1")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+z_index = -5
+offset_right = 1154.0
+offset_bottom = 220.0
+theme_override_fonts/normal_font = ExtResource("2_gryre")
+theme_override_font_sizes/normal_font_size = 80
+text = " 
+ Dinobox Simulator!"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_oso47")
+autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="OnButtonPressed"]
+[connection signal="finished" from="AudioStreamPlayer" to="Button" method="OnFinished"]
