@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b5xpxic73namd"
+path="res://.godot/imported/5.15.24 162 bpm.wav-f8cf5f82d2e1764702bec95ad97d8f57.sample"
+
+[deps]
+
+source_file="res://Assets/5.15.24 162 bpm.wav"
+dest_files=["res://.godot/imported/5.15.24 162 bpm.wav-f8cf5f82d2e1764702bec95ad97d8f57.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

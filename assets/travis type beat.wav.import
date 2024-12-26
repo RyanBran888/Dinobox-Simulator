@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ciqqhtj4ptln4"
+path="res://.godot/imported/travis type beat.wav-dd6c7cb0f43f88bd479014d7b36f119d.sample"
+
+[deps]
+
+source_file="res://Assets/travis type beat.wav"
+dest_files=["res://.godot/imported/travis type beat.wav-dd6c7cb0f43f88bd479014d7b36f119d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
